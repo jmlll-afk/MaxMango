@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300, 200"
+             x:Class="MaxMango.Views.RemovePopupPage">
+    <StackLayout Padding="10" >
+        <StackLayout.Clip>
+            <RoundRectangleGeometry CornerRadius="10"/>
+        </StackLayout.Clip>
+        <Label Text="Are you sure you want to remove this?" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Yes" Clicked="OnYesClicked" HorizontalOptions="CenterAndExpand" TextColor="Black" BackgroundColor="#F69000"/>
+            <Button Text="No" Clicked="OnNoClicked" HorizontalOptions="CenterAndExpand" TextColor="Black" BackgroundColor="#F69000"/>
+        </StackLayout>
+    </StackLayout>
+</xct:Popup>

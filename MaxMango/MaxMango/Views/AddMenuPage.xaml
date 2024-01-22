@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaxMango.Views.AddMenuPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="nameEntry" Placeholder="Enter Menu Name" />
+            <Button Text="Upload Image" Clicked="OnUploadClicked" TextColor="Black" BackgroundColor="#F69000"/>
+            <Button Text="Add Menu" Clicked="OnButtonClicked" TextColor="Black" BackgroundColor="#F69000"/>
+            <Image x:Name="resultImage"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

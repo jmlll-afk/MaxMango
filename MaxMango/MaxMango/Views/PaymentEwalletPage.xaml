@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaxMango.Views.PaymentEwalletPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="" x:Name="DateTimeLabel" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Total Price" />
+                <Label Text="{Binding TotalPrice}" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" WidthRequest="500">
+                <Label Text="Received Amount: " VerticalOptions="Center"/>
+                <Entry x:Name="ReceivedAmount" TextChanged="ReceivedAmount_TextChanged" HorizontalOptions="StartAndExpand" WidthRequest="230"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Reference Number: " VerticalOptions="Center"/>
+                <Entry x:Name="ReferenceNumber"  HorizontalOptions="StartAndExpand" WidthRequest="225"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Change"/>
+                <Label Text="{Binding Change}" x:Name="ChangeLabel" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <Button Text="Pay" Clicked="OnPaymentClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

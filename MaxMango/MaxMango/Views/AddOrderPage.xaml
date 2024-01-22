@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaxMango.Views.AddOrderPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Sizes: " FontSize="Large"/>
+            <CollectionView x:Name="sizesCollectionView" HeightRequest="150" SelectedItem="{Binding SelectedSize}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Size}" VerticalOptions="Center"/>
+                            <Label Text="{Binding Price}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                            <CheckBox x:Name="{Binding Size}" CheckedChanged="SizeCheckbox_CheckedChanged" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Add Ons: " FontSize="Large"/>
+            <StackLayout>
+                <CollectionView x:Name="AddOnsCollectionView" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding AddOn}" VerticalOptions="Center" />
+                                <Label Text="{Binding AddOnPrice}" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                                <CheckBox x:Name="{Binding AddOn}" CheckedChanged="AddOnCheckBox_CheckedChanged"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+            <Button Text="Add" Clicked="OnAddClicked"  TextColor="Black" BackgroundColor="#F69000"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

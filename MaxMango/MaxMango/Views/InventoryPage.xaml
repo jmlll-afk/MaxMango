@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaxMango.Views.InventoryPage"
+             Title="Inventory">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding Name}"  HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            <Label Text="{Binding Description}" />
+                            <Label Text="{Binding Quantity}" HorizontalOptions="End"/> 
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Add Item" Clicked="OnAddInventoryClicked" TextColor="Black" BackgroundColor="#F69000"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
